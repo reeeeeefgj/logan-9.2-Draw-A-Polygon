@@ -1,7 +1,7 @@
 from turtle import *
 import random
 
-
+types_triangle = {3 : "triangle", 4:"quadrillateral", 5:"pentagon",6:"hexagon", 7:"heptagon", 8:"octagon", 9:"nonagon", 10:"decagon" }
 
 window = Screen()
 window.bgcolor("black")
@@ -76,4 +76,10 @@ else:
         pen.left(angle)
 
         pen.forward(length)
+
+if sides <= 10:
+    pen.up()
+    pen.goto(0,250)
+    pen.write(types_triangle[sides])
+
 window.mainloop()
